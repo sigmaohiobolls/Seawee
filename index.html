@@ -1,213 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Blog</title>
-  <style>
-    /* Reset and base */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      line-height: 1.6;
-      background: #fff;
-      color: #222;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 1rem 2rem;
-    }
-    a {
-      color: #0070f3;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    header {
-      padding: 1rem 0;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    header h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 1.5rem;
-    }
-    nav a {
-      margin-left: 1rem;
-      font-weight: 600;
-    }
-    nav a:first-child {
-      margin-left: 0;
-    }
-    main {
-      margin-top: 2rem;
-    }
-    .posts {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    @media (min-width: 600px) {
-      .posts {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-    article.post-preview {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      transition: box-shadow 0.3s ease;
-      background: #fafafa;
-    }
-    article.post-preview:hover {
-      box-shadow: 0 4px 14px rgba(0, 118, 255, 0.2);
-    }
-    article.post-preview h2 {
-      margin-top: 0;
-      font-size: 1.25rem;
-    }
-    article.post-preview p {
-      margin-bottom: 0.5rem;
-      color: #555;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 0 1rem;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #ddd;
-      margin-top: 3rem;
-    }
-    section#about, section#contact {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid #ddd;
-    }
-    section#about h2, section#contact h2 {
-      font-weight: 700;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-    form {
-      max-width: 400px;
-    }
-    label {
-      display: block;
-      margin-bottom: 0.25rem;
-      font-weight: 600;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-family: inherit;
-      font-size: 1rem;
-    }
-    textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-    button {
-      background-color: #0070f3;
-      border: none;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #005bb5;
-    }
-    .message {
-      margin-top: 1rem;
-      font-weight: 600;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>byran.ee Style Blog</title>
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    line-height: 1.5;
+    font-weight: 600;
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  header {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  header h1 {
+    font-weight: 900;
+    font-size: 4rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+  }
+
+  nav {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.2em;
+  }
+
+  nav a {
+    margin: 0 1rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  article.post-preview {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+  }
+
+  article.post-preview:last-child {
+    border-bottom: none;
+  }
+
+  article.post-preview h2 {
+    font-weight: 900;
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+  }
+
+  article.post-preview h2 a {
+    color: black;
+  }
+
+  article.post-preview h2 a:hover {
+    text-decoration: underline;
+  }
+
+  article.post-preview p {
+    font-weight: 400;
+    color: #444;
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  article.post-preview time {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #888;
+  }
+
+  section#about, section#contact {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #222;
+    border-top: 1px solid #eee;
+    padding-top: 3rem;
+  }
+
+  section#about h2, section#contact h2 {
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    margin-top: 1rem;
+    max-width: 400px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  input, textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  button {
+    background: black;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background: #333;
+  }
+
+  footer {
+    margin-top: 6rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-align: center;
+    color: #999;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>My Blog</h1>
-    <nav>
-      <a href="#posts">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <section id="posts">
-      <article class="post-preview">
-        <h2><a href="#">Understanding CSS Grid Layout</a></h2>
-        <p>CSS Grid is a powerful layout system available in CSS. It is a 2-dimensional system...</p>
-        <small>Published April 20, 2024</small>
-      </article>
-      <article class="post-preview">
-        <h2><a href="#">JavaScript ES2024 Features</a></h2>
-        <p>Learn about the newest features introduced in ES2024 and how to use them effectively...</p>
-        <small>Published April 15, 2024</small>
-      </article>
-      <article class="post-preview">
-        <h2><a href="#">Accessibility Best Practices</a></h2>
-        <p>Making your website accessible is essential. Here are some best practices to follow...</p>
-        <small>Published April 10, 2024</small>
-      </article>
-      <article class="post-preview">
-        <h2><a href="#">Getting Started with React Hooks</a></h2>
-        <p>React Hooks provide a new way to manage state and side effects in functional components...</p>
-        <small>Published April 5, 2024</small>
-      </article>
-    </section>
+<header>
+  <h1>byran.ee</h1>
+  <nav>
+    <a href="#posts">Posts</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+<main>
+  <section id="posts">
+    <article class="post-preview">
+      <h2><a href="#">Understanding CSS Grid Layout</a></h2>
+      <p>CSS Grid is a powerful layout system available in CSS. It is a 2-dimensional system...</p>
+      <time datetime="2024-04-20">April 20, 2024</time>
+    </article>
+    <article class="post-preview">
+      <h2><a href="#">JavaScript ES2024 Features</a></h2>
+      <p>Learn about the newest features introduced in ES2024 and how to use them effectively...</p>
+      <time datetime="2024-04-15">April 15, 2024</time>
+    </article>
+    <article class="post-preview">
+      <h2><a href="#">Accessibility Best Practices</a></h2>
+      <p>Making your website accessible is essential. Here are some best practices to follow...</p>
+      <time datetime="2024-04-10">April 10, 2024</time>
+    </article>
+    <article class="post-preview">
+      <h2><a href="#">Getting Started with React Hooks</a></h2>
+      <p>React Hooks provide a new way to manage state and side effects in functional components...</p>
+      <time datetime="2024-04-05">April 5, 2024</time>
+    </article>
+  </section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hi, I'm a web developer and writer passionate about front-end development and modern web technologies. I share tips, tutorials, and insights on this blog.</p>
-    </section>
+  <section id="about">
+    <h2>About</h2>
+    <p>Hi, I'm a web developer and writer passionate about front-end development and modern web technologies. I share tips, tutorials, and insights on this blog.</p>
+  </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form id="contactForm" onsubmit="return handleSubmit(event)">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contactForm" onsubmit="return handleSubmit(event)">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
 
-        <button type="submit">Send</button>
-        <p class="message" id="formMessage"></p>
-      </form>
-    </section>
-  </main>
-  <footer>
-    &copy; 2024 My Blog. All rights reserved.
-  </footer>
+      <button type="submit">Send</button>
+      <p id="formMessage" style="margin-top:1rem; font-weight:600;"></p>
+    </form>
+  </section>
+</main>
+<footer>
+  &copy; 2024 byran.ee
+</footer>
 
-  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      const formMessage = document.getElementById("formMessage");
-      formMessage.style.color = "green";
-      formMessage.textContent = "Thank you for your message! I'll get back to you soon.";
-      event.target.reset();
-      return false;
-    }
-  </script>
+<script>
+  function handleSubmit(event) {
+    event.preventDefault();
+    const formMessage = document.getElementById('formMessage');
+    formMessage.style.color = 'green';
+    formMessage.textContent = "Thank you for your message! I'll get back to you soon.";
+    event.target.reset();
+    return false;
+  }
+</script>
 </body>
 </html>
